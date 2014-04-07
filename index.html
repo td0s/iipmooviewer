@@ -43,7 +43,7 @@
 
   <title>IIPMooViewer 2.0 :: HTML5 High Resolution Image Viewer</title>
 
-  <script src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
   <script type="text/javascript" src="js/iipmooviewer-2.0-min.js"></script>
 
 <!--[if lt IE 7]>
@@ -54,12 +54,12 @@
 
     // IIPMooViewer options: See documentation at http://iipimage.sourceforge.net for more details
     // Server path: set if not using default path
-    var server = '/fcgi-bin/iipsrv.fcgi';
+    var server = 'http://iipdemo.localhost/fcgi-bin/iipsrv.fcgi';
 
     // The *full* image path on the server. This path does *not* need to be in the web
     // server root directory. On Windows, use Unix style forward slash paths without
     // the "c:" prefix
-    var image = '/path/to/image.tif';
+    var image = '/home/toby/git/iipmooviewer/images/PalaisDuLouvre.tif';
 
     // Copyright or information message
     var credit = '&copy; copyright or information message';
@@ -68,7 +68,8 @@
     new IIPMooViewer( "viewer", {
 	server: server,
 	image: image,
-	credit: credit
+	credit: credit,
+	viewport: {resolution:4}
     });
 
   </script>
